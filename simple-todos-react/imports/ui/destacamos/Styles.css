@@ -1,0 +1,42 @@
+.destacamos-card {
+  border: none;
+  height: 100%;
+  padding: 50px 25px 25px 25px;
+  font-size: 18px;
+}
+
+.destacamos-col-img {
+  align-items: center;
+  align-content: center;
+}
+
+.destacamos-title {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.2em;
+  color: #515151;
+}
+
+.destacamos-p {
+  color: #515151;
+}
+
+.destacamos-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  position: relative;
+}
+
+.destacamos-list-item {
+  font-weight: 400;
+  line-height: 1.65;
+  color: #333333;
+  width: 50%;
+  font-size: 16px;
+}
+
+.destacamos-list-item-icon {
+  color: #0097a7;
+  width: 1.25rem;
+}

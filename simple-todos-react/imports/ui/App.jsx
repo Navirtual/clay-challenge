@@ -1,48 +1,56 @@
-import React from 'react';
-import { HowWeHelp } from './HowWeHelp';
+import React, { useState } from "react";
+import { ComoAyudamos } from "../ui/comoAyudamos/ComoAyudamos";
+import { Destacamos } from "../ui/destacamos/Destacamos";
+import { LangHeader } from "./langHeader/LangHeader";
+import { Video } from "./video/Video";
 
-export const App = () => (
-  <div>
-    <div>Menú header</div>
+export const App = () => {
+  const [lang, setLang] = useState("es");
 
-    <div>Jumbotron</div>
-    <hr />
+  return (
+    <div>
+      <LangHeader setLang={setLang} lang={lang} />
 
-    <HowWeHelp />
-    <hr />
+      {/* <div>Menú header</div>
+      <hr /> */}
 
-    <div>Video</div>
-    <hr />
+      {/* <div>Jumbotron</div>
+      <hr /> */}
 
-    <div>Clientes</div>
-    <hr />
+      <ComoAyudamos lang={lang} />
 
-    <div>Destacamos</div>
-    <hr />
+      <Video />
+      {/* <div>Video</div>
+      <hr /> */}
 
-    <div>Promesa</div>
-    <hr />
+      {/* <div>Clientes</div>
+      <hr /> */}
 
-    <div>Método Clay</div>
-    <hr />
+      <Destacamos lang={lang} />
 
-    <div>Números</div>
-    <hr />
+      {/* <div>Promesa</div>
+      <hr /> */}
 
-    <div>Testimonios</div>
-    <hr />
+      {/* <div>Método Clay</div>
+      <hr /> */}
 
-    <div>Prensa</div>
-    <hr />
+      {/* <div>Números</div>
+      <hr /> */}
 
-    <div>Prueba gratis</div>
-    <hr />
+      {/* <div>Testimonios</div>
+      <hr /> */}
 
-    <div>Newsletter</div>
-    <hr />
+      {/* <div>Prensa</div>
+      <hr /> */}
 
-    <div>Footer</div>
-    <hr />
+      {/* <div>Prueba gratis</div>
+      <hr /> */}
 
-  </div>
-);
+      {/* <div>Newsletter</div>
+      <hr /> */}
+
+      {/* <div>Footer</div>
+      <hr /> */}
+    </div>
+  );
+};

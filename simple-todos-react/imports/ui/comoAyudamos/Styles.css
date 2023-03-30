@@ -1,0 +1,33 @@
+.como-ayudamos-container {
+  padding-bottom: 30px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(142, 209, 252, 0.1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.como-ayudamos-title {
+  font-size: 41px;
+  font-weight: bold;
+  line-height: 1.2em;
+  color: #515151;
+  padding: 0 12rem 50px 12rem;
+}
+
+.como-ayudamos-card {
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.como-ayudamos-card-title {
+  color: #515151;
+  font-size: 23px;
+}
+
+.como-ayudamos-class-p {
+  color: #333333;
+  font-size: 17px;
+}

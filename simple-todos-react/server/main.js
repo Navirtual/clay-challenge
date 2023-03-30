@@ -1,37 +1,60 @@
 import { Meteor } from 'meteor/meteor';
-import { LinksCollection } from '/imports/api/links';
+import { TextsCollection } from '../imports/api/TextsCollection';
 
-async function insertLink({ title, url }) {
-  await LinksCollection.insertAsync({ title, url, createdAt: new Date() });
-}
-
-Meteor.startup(async () => {
-  // If the Links collection is empty, add some data.
-  if (await LinksCollection.find().countAsync() === 0) {
-    await insertLink({
-      title: 'Do the Tutorial',
-      url: 'https://www.meteor.com/tutorials/react/creating-an-app',
-    });
-
-    await insertLink({
-      title: 'Follow the Guide',
-      url: 'https://guide.meteor.com',
-    });
-
-    await insertLink({
-      title: 'Read the Docs',
-      url: 'https://docs.meteor.com',
-    });
-
-    await insertLink({
-      title: 'Discussions',
-      url: 'https://forums.meteor.com',
-    });
-  }
-
-  // We publish the entire Links collection to all clients.
-  // In order to be fetched in real-time to the clients
-  Meteor.publish("links", function () {
-    return LinksCollection.find();
+const insertText = ({ lang = 'es', component, id, text }) =>
+  TextsCollection.insert({
+    lang,
+    component,
+    id,
+    text,
   });
+
+Meteor.startup(() => {
+  if (TextsCollection.find().count() === 0) {
+    [
+      {
+        component: 'how-we-help',
+        id: 'header',
+        text: '¿Cómo te ayudamos? Test',
+      },
+      {
+        component: 'how-we-help',
+        id: 'title',
+        text: 'Impulsamos tu empresa a través de nuestra tecnología financiera Test',
+      },
+      {
+        component: 'how-we-help',
+
+        id: 'card1.title',
+        text: 'Conciliación Bancaria Test',
+      },
+      {
+        component: 'how-we-help',
+        id: 'card1.p',
+        text: 'Cuadra la caja de tu empresa de manera confiable y segura. Nos conectamos automáticamente a bancos, SII y facturadores. Todo desde nuestro Software contable y financiero',
+      },
+      {
+        component: 'how-we-help',
+        id: 'card2.title',
+        text: 'Gestión y Cobranza Test',
+      },
+      {
+        component: 'how-we-help',
+        id: 'card2.p',
+        text: 'Reportería instantánea de clientes y proveedores. Con nuestro software contable y de gestión financiera, automatizamos procesos para tener una cobranza más eficiente',
+      },
+      {
+        component: 'how-we-help',
+        id: 'card3.title',
+        text: 'Conciliación Bancaria Test',
+      },
+      {
+        component: 'how-we-help',
+        id: 'card3.p',
+        text: 'Cuadra la caja de tu empresa de manera confiable y segura. Nos conectamos automáticamente a bancos, SII y facturadores. Todo desde nuestro Software contable y financiero',
+      },
+    ].forEach(insertText);
+  }
 });
+
+Meteor.startup(async () => {});
