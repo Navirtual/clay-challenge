@@ -1,16 +1,13 @@
 import React from "react";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ClientIndex, AdminIndex } from "./";
+import { ClientIndex } from ".";
+import { RUTAS } from "./utils";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: RUTAS.BASE,
     element: <ClientIndex />,
-  },
-  {
-    path: "admin",
-    element: <AdminIndex />,
   },
 ]);
 export const App = () => {

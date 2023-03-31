@@ -1,0 +1,38 @@
+[
+  {
+    "lang": "es",
+    "component": "como-ayudamos",
+    "header": "¿Cómo te ayudamos?",
+    "title": "Impulsamos tu empresa a través de nuestra tecnología financiera",
+    "card1": {
+      "title": "Conciliación Bancaria",
+      "p": "Cuadra la caja de tu empresa de manera confiable y segura. Nos conectamos automáticamente a bancos, SII y facturadores. Todo desde nuestro Software contable y financiero."
+    },
+    "card2": {
+      "title": "Gestión y Cobranza",
+      "p": "Reportería instantánea de clientes y proveedores. Con nuestro software contable y de gestión financiera, automatizamos procesos para tener una cobranza más eficiente."
+    },
+    "card3": {
+      "title": "Contabilidad",
+      "p": "Porque en Clay la prioridad es facilitar tu gestión, automatiza hasta el 80% de tu contabilidad y obtén los estados financieros de tu negocio de forma sencilla, 100% disponibles para cuando los necesites."
+    }
+  },
+  {
+    "lang": "en",
+    "component": "como-ayudamos",
+    "header": "How we help you?",
+    "title": "We promote your company through our financial technology",
+    "card1": {
+      "title": "Bank reconciliation",
+      "p": "Balance the box of your company in a reliable and safe way. We automatically connect to banks, SII and billers. Everything from our accounting and financial software."
+    },
+    "card2": {
+      "title": "Management and Collection",
+      "p": "Instant reporting of customers and suppliers. With our accounting and financial management software, we automate processes to have a more efficient collection."
+    },
+    "card3": {
+      "title": "Accounting",
+      "p": "Because at Clay the priority is to facilitate your management, automate up to 80% of your accounting and obtain the financial statements of your business in a simple way, 100% available when you need them."
+    }
+  }
+]
