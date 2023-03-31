@@ -1,0 +1,70 @@
+[
+  {
+    "lang": "es",
+    "component": "destacamos",
+    "texts": [
+      {
+        "id": "header",
+        "text": "¿En qué nos destacamos?"
+      },
+      {
+        "id": "title",
+        "text": "Automatizamos procesos"
+      },
+      {
+        "id": "p",
+        "text": "Y los transformamos en servicios. Hemos creado robots que importan información desde distintas fuentes, como bancos y facturadores, para que no uses tiempo en recolectar datos, sino solo en analizarlos. Deja que nuestro software contable y financiero te ayude en la gestión de tu negocio."
+      },
+      {
+        "id": "item1",
+        "text": "Cartolas Bancarias"
+      },
+      {
+        "id": "item2",
+        "text": "Cartolas de transferencias"
+      },
+      {
+        "id": "item3",
+        "text": "Facturas Electrónicas"
+      },
+      {
+        "id": "item4",
+        "text": "Boletas de Honorarios"
+      }
+    ]
+  },
+  {
+    "lang": "en",
+    "component": "destacamos",
+    "texts": [
+      {
+        "id": "header",
+        "text": "What do we excel at?"
+      },
+      {
+        "id": "title",
+        "text": "We automate processes"
+      },
+      {
+        "id": "p",
+        "text": "And we transform them into services. We have created robots that import information from different sources, such as banks and billers, so that you do not spend time collecting data, but only analyzing it. Let our accounting and financial software help you manage your business."
+      },
+      {
+        "id": "item1",
+        "text": "Bank Notes"
+      },
+      {
+        "id": "item2",
+        "text": "Transfer cards"
+      },
+      {
+        "id": "item3",
+        "text": "Eletronic bills"
+      },
+      {
+        "id": "item4",
+        "text": "Fee Tickets"
+      }
+    ]
+  }
+]

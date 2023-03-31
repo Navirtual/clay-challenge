@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Styles.css";
+import "./styles.css";
 
 export const Video = () => {
   return (
@@ -12,7 +12,6 @@ export const Video = () => {
         title="YouTube video player"
         frameBorder={0}
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
       ></iframe>
     </div>
   );

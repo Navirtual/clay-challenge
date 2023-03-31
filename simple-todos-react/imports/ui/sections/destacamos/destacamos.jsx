@@ -1,15 +1,15 @@
 import React from "react";
 
 import { useTracker } from "meteor/react-meteor-data";
-import { TextsCollection } from "../../api/TextsCollection";
-import { getText } from "../utils/utils";
+import { TextsCollection } from "../../../api/TextsCollection";
+import { getText } from "../../utils/";
 
-import "./Styles.css";
-import "../Shared.css";
+import "./styles.css";
+import "../../Shared.css";
 
 export const Destacamos = ({ lang }) => {
   const t = useTracker(() =>
-    TextsCollection.find({ lang, component: "what-stands-out-us" }).fetch()
+    TextsCollection.find({ lang, component: "destacamos" }).fetch()
   );
   return (
     <div className="container-fluid text-center mb-4">

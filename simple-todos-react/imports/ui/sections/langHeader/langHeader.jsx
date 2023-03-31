@@ -1,5 +1,7 @@
 import React from "react";
 
+import { IDIOMA } from "../../utils/";
+
 export const LangHeader = ({ setLang, lang }) => {
   return (
     <div className="container-fluid mb-4">
@@ -8,15 +10,15 @@ export const LangHeader = ({ setLang, lang }) => {
           <div className="col-4"></div>
           <button
             className="col-2 btn btn-primary btn-sm mr-2"
-            disabled={lang === "es"}
-            onClick={() => setLang("es")}
+            disabled={lang === IDIOMA.ES}
+            onClick={() => setLang(IDIOMA.ES)}
           >
             <i className="fas fa-flag"></i> ES
           </button>
           <button
             className="col-2 btn btn-primary btn-sm ml-2"
-            disabled={lang === "en"}
-            onClick={() => setLang("en")}
+            disabled={lang === IDIOMA.EN}
+            onClick={() => setLang(IDIOMA.EN)}
           >
             <i className="fas fa-flag"></i> EN
           </button>

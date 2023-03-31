@@ -1,15 +1,15 @@
 import React from "react";
 
 import { useTracker } from "meteor/react-meteor-data";
-import { TextsCollection } from "../../api/TextsCollection";
-import { getText } from "../utils/utils";
+import { TextsCollection } from "../../../api/TextsCollection";
+import { getText } from "../../utils/";
 
-import "./Styles.css";
-import "../Shared.css";
+import "./styles.css";
+import "../../Shared.css";
 
 export const ComoAyudamos = ({ lang }) => {
   const t = useTracker(() =>
-    TextsCollection.find({ lang, component: "how-we-help" }).fetch()
+    TextsCollection.find({ lang, component: "como-ayudamos" }).fetch()
   );
 
   return (
