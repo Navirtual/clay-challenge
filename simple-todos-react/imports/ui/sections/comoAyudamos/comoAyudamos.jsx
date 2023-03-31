@@ -2,6 +2,7 @@ import React from "react";
 
 import { useTracker } from "meteor/react-meteor-data";
 import { TextsCollection } from "../../../api/TextsCollection";
+
 import { COMPONENTES } from "../../utils/";
 
 import "./comoAyudamos.style.css";
