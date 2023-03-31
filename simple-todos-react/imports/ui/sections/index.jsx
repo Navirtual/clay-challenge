@@ -1,4 +1,4 @@
 export * from "./comoAyudamos";
 export * from "./destacamos";
-export * from "./langHeader";
+export * from "./menuIdioma";
 export * from "./video";

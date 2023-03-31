@@ -1,8 +1,8 @@
 import React from "react";
 
-import { IDIOMA } from "../../utils/";
+import { IDIOMAS } from "../../utils/";
 
-export const LangHeader = ({ setLang, lang }) => {
+export const MenuIdioma = ({ setLang, lang }) => {
   return (
     <div className="container-fluid mb-4">
       <div className="container">
@@ -10,15 +10,15 @@ export const LangHeader = ({ setLang, lang }) => {
           <div className="col-4"></div>
           <button
             className="col-2 btn btn-primary btn-sm mr-2"
-            disabled={lang === IDIOMA.ES}
-            onClick={() => setLang(IDIOMA.ES)}
+            disabled={lang === IDIOMAS.ES}
+            onClick={() => setLang(IDIOMAS.ES)}
           >
             <i className="fas fa-flag"></i> ES
           </button>
           <button
             className="col-2 btn btn-primary btn-sm ml-2"
-            disabled={lang === IDIOMA.EN}
-            onClick={() => setLang(IDIOMA.EN)}
+            disabled={lang === IDIOMAS.EN}
+            onClick={() => setLang(IDIOMAS.EN)}
           >
             <i className="fas fa-flag"></i> EN
           </button>

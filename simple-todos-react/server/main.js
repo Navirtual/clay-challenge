@@ -1,23 +1,21 @@
 import { Meteor } from "meteor/meteor";
 import { TextsCollection } from "../imports/api/TextsCollection";
+import comoAyudamosData from "../imports/data/comoAyudamos.data.json";
+import destacamosData from "../imports/data/destacamos.data.json";
+import {COMPONENTES} from '../imports/ui/utils/'
 
-import comoAyudamosData from "./comoAyudamos.data.json";
-import destacamosData from "./destacamos.data.json";
-
-const insertText = ({ lang, component, texts }) =>
+const insertText = ({  ...args }) =>
   TextsCollection.insert({
-    lang,
-    component,
-    texts,
+    ...args
   });
 
 Meteor.startup(() => {
-  let filters = { component: "como-ayudamos" };
+  let filters = { component: COMPONENTES.COMO_AYUDAMOS };
   if (TextsCollection.find(filters).count() === 0) {
     comoAyudamosData.forEach(insertText);
   }
 
-  filters = { component: "destacamos" };
+  filters = { component: COMPONENTES.DESTACAMOS };
   if (TextsCollection.find(filters).count() === 0) {
     destacamosData.forEach(insertText);
   }
