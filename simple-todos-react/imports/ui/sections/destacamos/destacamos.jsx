@@ -5,7 +5,7 @@ import { TextsCollection } from "../../../api/TextsCollection";
 import { COMPONENTES } from "../../utils/";
 
 import "./destacamos.style.css";
-import "../../Shared.css";
+import "../../shared.css";
 
 export const Destacamos = ({ lang }) => {
   const t = useTracker(() =>
@@ -16,10 +16,10 @@ export const Destacamos = ({ lang }) => {
       <div className="container-fluid text-center mb-4">
         <div className="container">
           <div className="row">
-            <div className="col-6 destacamos-col-img">
+            <div className="col-md-6 destacamos-col-img">
               <img src="https://clay.cl/wp-content/uploads/2020/07/Documents-pana.svg" />
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
               <div className="card destacamos-card text-left">
                 <div className="card-body">
                   <h6 className="shared-header">{t.header}</h6>

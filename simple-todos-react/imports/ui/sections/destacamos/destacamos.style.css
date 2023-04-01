@@ -39,3 +39,12 @@
   color: #0097a7;
   width: 1.25rem;
 }
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 0.5rem;
+  }
+  .destacamos-list-item {
+    width: 100%;
+  }
+}

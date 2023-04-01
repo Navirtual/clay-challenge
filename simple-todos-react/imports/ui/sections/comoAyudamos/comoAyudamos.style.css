@@ -31,3 +31,17 @@
   color: #333333;
   font-size: 17px;
 }
+
+@media (max-width: 768px) {
+  .como-ayudamos-title {
+    padding: 20px 0rem;
+  }
+
+  .col-sm-12 {
+    margin-bottom: 2rem;
+  }
+
+  .como-ayudamos-class-p {
+    padding: 0 0.75rem;
+  }
+}

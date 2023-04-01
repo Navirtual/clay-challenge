@@ -6,7 +6,7 @@ import { TextsCollection } from "../../../api/TextsCollection";
 import { COMPONENTES } from "../../utils/";
 
 import "./comoAyudamos.style.css";
-import "../../Shared.css";
+import "../../shared.css";
 
 export const ComoAyudamos = ({ lang }) => {
   const texto = useTracker(() =>
@@ -19,7 +19,7 @@ export const ComoAyudamos = ({ lang }) => {
   return (
     texto && (
       <div className="container-fluid mb-4 text-center como-ayudamos-container">
-        <div className="container ">
+        <div className="container">
           <div className="row">
             <div className="col">
               <h6 className="shared-header">{texto.header}</h6>
@@ -27,7 +27,7 @@ export const ComoAyudamos = ({ lang }) => {
             </div>
           </div>
           <div className="row como-ayudamos-row">
-            <div className="col-4">
+            <div className="col-md-4 col-sm-12">
               <div className="card como-ayudamos-card">
                 <div className="card-body como-ayudamos-card-body">
                   <h2 className="pb-3 pt-2 como-ayudamos-card-title">
@@ -37,7 +37,7 @@ export const ComoAyudamos = ({ lang }) => {
                 </div>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-md-4 col-sm-12">
               <div className="card como-ayudamos-card">
                 <div className="card-body como-ayudamos-card-body">
                   <h2 className="pb-3 pt-2 como-ayudamos-card-title">
@@ -47,7 +47,7 @@ export const ComoAyudamos = ({ lang }) => {
                 </div>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-md-4 col-sm-12">
               <div className="card como-ayudamos-card">
                 <div className="card-body como-ayudamos-card-body">
                   <h2 className="pb-3 pt-2 como-ayudamos-card-title">
