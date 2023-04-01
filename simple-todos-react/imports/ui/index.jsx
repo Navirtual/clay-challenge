@@ -8,7 +8,7 @@ export const ClientIndex = () => {
   const [idioma, setIdioma] = useState(IDIOMAS.ES);
 
   return (
-    <div>
+    <>
       <MenuIdioma setLang={setIdioma} lang={idioma} />
 
       {/* <div>Menú header</div>
@@ -49,6 +49,6 @@ export const ClientIndex = () => {
 
       {/* <div>Footer</div>
           <hr /> */}
-    </div>
+    </>
   );
 };
