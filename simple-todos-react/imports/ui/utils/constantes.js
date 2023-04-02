@@ -1,13 +1,17 @@
-export const IDIOMAS = {
+export const IDIOMA = {
   ES: "es",
   EN: "en",
 };
 
-export const COMPONENTES = {
-  COMO_AYUDAMOS: 'como-ayudamos',
-  DESTACAMOS: 'destacamos'
-}
+export const COMPONENTE = {
+  COMO_AYUDAMOS: "como-ayudamos",
+  DESTACAMOS: "destacamos",
+};
 
-export const RUTAS = {
-  BASE: '/'
-}
+export const RUTA = {
+  BASE: "/",
+};
+
+export const METHOD = {
+  GET: "GET",
+};

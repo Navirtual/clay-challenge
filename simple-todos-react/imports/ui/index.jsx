@@ -1,25 +1,22 @@
 import React, { useState } from "react";
-
 import { ComoAyudamos, Destacamos, MenuIdioma, Video } from "./sections";
-
-import { IDIOMAS } from "./utils";
+import { IDIOMA } from "./utils";
 
 export const ClientIndex = () => {
-  const [idioma, setIdioma] = useState(IDIOMAS.ES);
+  const [idioma, setIdioma] = useState(IDIOMA.ES);
 
   return (
     <>
       <MenuIdioma setLang={setIdioma} lang={idioma} />
 
-      {/* <div>Menú header</div>
-          <hr /> */}
+      {/* Prototipo sin Menú Header */}
 
       {/* <div>Jumbotron</div>
           <hr /> */}
 
       <ComoAyudamos lang={idioma} />
 
-      {/* <Video /> */}
+      <Video />
 
       {/* <div>Clientes</div>
           <hr /> */}

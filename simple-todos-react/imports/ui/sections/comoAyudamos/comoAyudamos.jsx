@@ -1,23 +1,19 @@
-import React from "react";
-
-import { useTracker } from "meteor/react-meteor-data";
-import { TextsCollection } from "../../../api/TextsCollection";
-
-import { COMPONENTES } from "../../utils/";
-
+import React, { useEffect, useState } from "react";
+import { COMPONENTE } from "../../utils/";
+import { TextosService } from "../../services/textos.services";
 import "./comoAyudamos.style.css";
 import "../../shared.css";
 
 export const ComoAyudamos = ({ lang }) => {
-  const texto = useTracker(() =>
-    TextsCollection.findOne({
-      lang,
-      component: COMPONENTES.COMO_AYUDAMOS,
-    })
-  );
+  const [texto, setTexto] = useState();
+  useEffect(() => {
+    TextosService(lang, COMPONENTE.COMO_AYUDAMOS).then((response) => {
+      setTexto(response);
+    });
+  }, [lang]);
 
   return (
-    texto && (
+    texto?.title && (
       <div className="container-fluid mb-4 text-center como-ayudamos-container">
         <div className="container">
           <div className="row">

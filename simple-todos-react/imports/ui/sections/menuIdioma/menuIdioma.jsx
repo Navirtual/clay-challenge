@@ -1,6 +1,5 @@
 import React from "react";
-
-import { IDIOMAS } from "../../utils/";
+import { IDIOMA } from "../../utils/";
 
 export const MenuIdioma = ({ setLang, lang }) => {
   return (
@@ -10,15 +9,15 @@ export const MenuIdioma = ({ setLang, lang }) => {
           <div className="col-4"></div>
           <button
             className="col-2 btn btn-primary btn-sm mr-2"
-            disabled={lang === IDIOMAS.ES}
-            onClick={() => setLang(IDIOMAS.ES)}
+            disabled={lang === IDIOMA.ES}
+            onClick={() => setLang(IDIOMA.ES)}
           >
             <i className="fas fa-flag"></i> ES
           </button>
           <button
             className="col-2 btn btn-primary btn-sm ml-2"
-            disabled={lang === IDIOMAS.EN}
-            onClick={() => setLang(IDIOMAS.EN)}
+            disabled={lang === IDIOMA.EN}
+            onClick={() => setLang(IDIOMA.EN)}
           >
             <i className="fas fa-flag"></i> EN
           </button>

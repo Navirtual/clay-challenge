@@ -1,24 +1,54 @@
 import { Meteor } from "meteor/meteor";
+import { WebApp } from "meteor/webapp";
 import { TextsCollection } from "../imports/api/TextsCollection";
 import comoAyudamosData from "../imports/data/comoAyudamos.data.json";
 import destacamosData from "../imports/data/destacamos.data.json";
-import {COMPONENTES} from '../imports/ui/utils/'
+import { COMPONENTE } from "../imports/ui/utils/";
+import express from "express";
 
-const insertText = ({  ...args }) =>
+const app = express();
+const BASE_PATH = "/api/textos";
+
+const insertText = ({ ...args }) =>
   TextsCollection.insert({
-    ...args
+    ...args,
   });
 
+const STATUS_CODE = {
+  OK: 200,
+};
+
 Meteor.startup(() => {
-  let filters = { component: COMPONENTES.COMO_AYUDAMOS };
+  let filters = { component: COMPONENTE.COMO_AYUDAMOS };
   if (TextsCollection.find(filters).count() === 0) {
     comoAyudamosData.forEach(insertText);
   }
 
-  filters = { component: COMPONENTES.DESTACAMOS };
+  filters = { component: COMPONENTE.DESTACAMOS };
   if (TextsCollection.find(filters).count() === 0) {
     destacamosData.forEach(insertText);
   }
 });
 
-Meteor.startup(async () => {});
+app.get(`${BASE_PATH}`, async (req, res) => {
+  console.log("a");
+  const results = await TextsCollection.find({}).fetch();
+  res.status(STATUS_CODE.OK).json(results);
+});
+
+app.get(`${BASE_PATH}/:lang`, async (req, res) => {
+  console.log("b");
+  const results = await TextsCollection.find({ lang: req.params.lang }).fetch();
+  res.status(STATUS_CODE.OK).json(results);
+});
+
+app.get(`${BASE_PATH}/:lang/:component`, async (req, res) => {
+  console.log("c");
+  const results = await TextsCollection.findOne({
+    lang: req.params.lang,
+    component: req.params.component,
+  });
+  res.status(STATUS_CODE.OK).json(results);
+});
+
+WebApp.connectHandlers.use(app);

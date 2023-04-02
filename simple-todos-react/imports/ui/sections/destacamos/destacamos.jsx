@@ -1,18 +1,19 @@
-import React from "react";
-
-import { useTracker } from "meteor/react-meteor-data";
-import { TextsCollection } from "../../../api/TextsCollection";
-import { COMPONENTES } from "../../utils/";
-
+import React, { useEffect, useState } from "react";
+import { COMPONENTE } from "../../utils/";
+import { TextosService } from "../../services/textos.services";
 import "./destacamos.style.css";
 import "../../shared.css";
 
 export const Destacamos = ({ lang }) => {
-  const t = useTracker(() =>
-    TextsCollection.findOne({ lang, component: COMPONENTES.DESTACAMOS })
-  );
+  const [texto, setTexto] = useState();
+  useEffect(() => {
+    TextosService(lang, COMPONENTE.DESTACAMOS).then((response) => {
+      setTexto(response);
+    });
+  }, [lang]);
+
   return (
-    t && (
+    texto?.title && (
       <div className="container-fluid text-center mb-4">
         <div className="container">
           <div className="row">
@@ -22,33 +23,33 @@ export const Destacamos = ({ lang }) => {
             <div className="col-md-6">
               <div className="card destacamos-card text-left">
                 <div className="card-body">
-                  <h6 className="shared-header">{t.header}</h6>
-                  <h3 className="destacamos-title mb-4">{t.title}</h3>
-                  <p>{t.p}</p>
+                  <h6 className="shared-header">{texto.header}</h6>
+                  <h3 className="destacamos-title mb-4">{texto.title}</h3>
+                  <p>{texto.p}</p>
                   <ul className="destacamos-list">
                     <li className="destacamos-list-item">
                       <span className="destacamos-list-item-icon pr-2">
                         <i className="fas fa-check"></i>
                       </span>
-                      {t.item1}
+                      {texto.item1}
                     </li>
                     <li className="destacamos-list-item">
                       <span className="destacamos-list-item-icon pr-2">
                         <i className="fas fa-check"></i>
                       </span>
-                      {t.item2}
+                      {texto.item2}
                     </li>
                     <li className="destacamos-list-item">
                       <span className="destacamos-list-item-icon pr-2">
                         <i className="fas fa-check"></i>
                       </span>
-                      {t.item3}
+                      {texto.item3}
                     </li>
                     <li className="destacamos-list-item">
                       <span className="destacamos-list-item-icon pr-2">
                         <i className="fas fa-check"></i>
                       </span>
-                      {t.item4}
+                      {texto.item4}
                     </li>
                   </ul>
                 </div>
