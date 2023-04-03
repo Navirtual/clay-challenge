@@ -1,0 +1,14 @@
+.shared-header {
+  color: #0097a7;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .shared-header {
+    text-align: center;
+  }
+}

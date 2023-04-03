@@ -1,0 +1,7 @@
+{
+    "galaxy.meteor.com": {
+        "env": {
+            "MONGO_URL": "mongodb+srv://meteor:meteor1234@clay-tech-app.ebt8cv3.mongodb.net/?retryWrites=true&w=majority"
+        }
+    }
+}
