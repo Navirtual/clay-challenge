@@ -1,15 +1,21 @@
 import { Meteor } from "meteor/meteor";
 import { WebApp } from "meteor/webapp";
 import { TextsCollection } from "../imports/api/TextsCollection";
-
 import comoAyudamosData from "../imports/data/comoAyudamos.data.json";
 import destacamosData from "../imports/data/destacamos.data.json";
 import jumbotronData from "../imports/data/jumbotron.data.json";
-
 import { COMPONENTE } from "../imports/ui/utils/";
+import swaggerDocument from "./swagger.json";
+
 import express from "express";
 
+const swaggerUI = require("swagger-ui-express");
+
+console.log(swaggerDocument);
+
 const app = express();
+
+app.use("/api-doc", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 const BASE_PATH = "/api/textos";
 
 const insertText = ({ ...args }) =>
