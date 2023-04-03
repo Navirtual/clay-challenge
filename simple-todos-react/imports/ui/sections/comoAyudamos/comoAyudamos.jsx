@@ -1,16 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useTracker } from "meteor/react-meteor-data";
 import { COMPONENTE } from "../../utils/";
-import { TextosService } from "../../services/textos.services";
+import { TextsCollection } from "../../../api/TextsCollection";
 import "./comoAyudamos.style.css";
 import "../../shared.css";
 
 export const ComoAyudamos = ({ lang }) => {
-  const [texto, setTexto] = useState();
-  useEffect(() => {
-    TextosService(lang, COMPONENTE.COMO_AYUDAMOS).then((response) => {
-      setTexto(response);
-    });
-  }, [lang]);
+  const texto = useTracker(() =>
+    TextsCollection.findOne({ lang, component: COMPONENTE.COMO_AYUDAMOS })
+  );
+
+  /**
+   * Se comenta implementación que utiliza el service.
+   */
+
+  // const [texto, setTexto] = useState();
+  // useEffect(() => {
+  //   TextosService(lang, COMPONENTE.COMO_AYUDAMOS).then((response) => {
+  //     setTexto(response);
+  //   });
+  // }, [lang]);
 
   return (
     texto?.title && (

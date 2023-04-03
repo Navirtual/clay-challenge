@@ -1,15 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { TextosService } from "../../services/textos.services";
-import { COMPONENTE } from "../../utils";
+import React from "react";
+import { useTracker } from "meteor/react-meteor-data";
+import { COMPONENTE } from "../../utils/";
+import { TextsCollection } from "../../../api/TextsCollection";
 import "./jumbotron.style.css";
 
 export const Jumbotron = ({ lang }) => {
-  const [texto, setTexto] = useState();
-  useEffect(() => {
-    TextosService(lang, COMPONENTE.JUMBOTRON).then((response) => {
-      setTexto(response);
-    });
-  }, [lang]);
+  const texto = useTracker(() =>
+    TextsCollection.findOne({ lang, component: COMPONENTE.JUMBOTRON })
+  );
+
+  /**
+   * Se comenta implementación que utiliza el service.
+   */
+
+  // const [texto, setTexto] = useState();
+  // useEffect(() => {
+  //   TextosService(lang, COMPONENTE.JUMBOTRON).then((response) => {
+  //     setTexto(response);
+  //   });
+  // }, [lang, t]);
 
   return (
     texto?.title && (
