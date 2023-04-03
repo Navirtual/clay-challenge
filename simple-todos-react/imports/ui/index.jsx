@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { ComoAyudamos, Destacamos, MenuIdioma, Video } from "./sections";
+import {
+  ComoAyudamos,
+  Destacamos,
+  Jumbotron,
+  MenuIdioma,
+  Video,
+} from "./sections";
 import { IDIOMA } from "./utils";
 
 export const ClientIndex = () => {
@@ -11,8 +17,7 @@ export const ClientIndex = () => {
 
       {/* Prototipo sin Menú Header */}
 
-      {/* <div>Jumbotron</div>
-          <hr /> */}
+      <Jumbotron lang={idioma} />
 
       <ComoAyudamos lang={idioma} />
 

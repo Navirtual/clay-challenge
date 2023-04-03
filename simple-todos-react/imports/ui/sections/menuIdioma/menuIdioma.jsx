@@ -3,7 +3,7 @@ import { IDIOMA } from "../../utils/";
 
 export const MenuIdioma = ({ setLang, lang }) => {
   return (
-    <div className="container-fluid mb-4">
+    <div className="container-fluid">
       <div className="container">
         <div className="row">
           <div className="col-4"></div>
