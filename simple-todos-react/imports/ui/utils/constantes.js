@@ -3,6 +3,10 @@ export const IDIOMA = {
   EN: "en",
 };
 
+export const ENV = {
+  DEV: "development"
+}
+
 export const COMPONENTE = {
   COMO_AYUDAMOS: "como-ayudamos",
   DESTACAMOS: "destacamos",
@@ -11,6 +15,8 @@ export const COMPONENTE = {
 
 export const RUTA = {
   BASE: "/",
+  LOCALHOST: "http://localhost:3000",
+  METEOR: "https://clay-tech-app.meteorapp.com",
 };
 
 export const METHOD = {

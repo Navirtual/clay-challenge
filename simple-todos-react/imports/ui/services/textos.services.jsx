@@ -1,9 +1,7 @@
-import { METHOD } from "../utils";
+import { ENV, METHOD, RUTA } from "../utils";
 
 const BASE_URL =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3000"
-    : "https://clay-tech-app.meteorapp.com";
+  process.env.NODE_ENV === ENV.DEV ? RUTA.LOCALHOST : RUTA.METEOR;
 const BASE_PATH = `${BASE_URL}/api/textos`;
 
 export const TextosService = async (lang, componente) => {
