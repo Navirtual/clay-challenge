@@ -1,8 +1,11 @@
 import { Meteor } from "meteor/meteor";
 import { WebApp } from "meteor/webapp";
 import { TextsCollection } from "../imports/api/TextsCollection";
+
 import comoAyudamosData from "../imports/data/comoAyudamos.data.json";
 import destacamosData from "../imports/data/destacamos.data.json";
+import jumbotronData from "../imports/data/jumbotron.data.json";
+
 import { COMPONENTE } from "../imports/ui/utils/";
 import express from "express";
 
@@ -28,22 +31,24 @@ Meteor.startup(() => {
   if (TextsCollection.find(filters).count() === 0) {
     destacamosData.forEach(insertText);
   }
+
+  filters = { component: COMPONENTE.JUMBOTRON };
+  if (TextsCollection.find(filters).count() === 0) {
+    jumbotronData.forEach(insertText);
+  }
 });
 
 app.get(`${BASE_PATH}`, async (req, res) => {
-  console.log("a");
   const results = await TextsCollection.find({}).fetch();
   res.status(STATUS_CODE.OK).json(results);
 });
 
 app.get(`${BASE_PATH}/:lang`, async (req, res) => {
-  console.log("b");
   const results = await TextsCollection.find({ lang: req.params.lang }).fetch();
   res.status(STATUS_CODE.OK).json(results);
 });
 
 app.get(`${BASE_PATH}/:lang/:component`, async (req, res) => {
-  console.log("c");
   const results = await TextsCollection.findOne({
     lang: req.params.lang,
     component: req.params.component,

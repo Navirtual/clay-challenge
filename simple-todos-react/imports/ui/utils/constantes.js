@@ -6,6 +6,7 @@ export const IDIOMA = {
 export const COMPONENTE = {
   COMO_AYUDAMOS: "como-ayudamos",
   DESTACAMOS: "destacamos",
+  JUMBOTRON: "jumbotron",
 };
 
 export const RUTA = {
