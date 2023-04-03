@@ -15,7 +15,7 @@ export const ClientIndex = () => {
     <>
       <MenuIdioma setLang={setIdioma} lang={idioma} />
 
-      {/* Prototipo sin Menú Header */}
+      {/* Menú de Header no implementado */}
 
       <Jumbotron lang={idioma} />
 
@@ -23,34 +23,25 @@ export const ClientIndex = () => {
 
       <Video />
 
-      {/* <div>Clientes</div>
-          <hr /> */}
+      {/* Sección de "Clientes" no implementado */}
 
       <Destacamos lang={idioma} />
 
-      {/* <div>Promesa</div>
-          <hr /> */}
+      {/* Sección "Nuestra Promesa" no implementado */}
 
-      {/* <div>Método Clay</div>
-          <hr /> */}
+      {/* Sección "El Método Clay" no implementado */}
 
-      {/* <div>Números</div>
-          <hr /> */}
+      {/* Sección "Números" no implementado */}
 
-      {/* <div>Testimonios</div>
-          <hr /> */}
+      {/* Sección "Testimonios" no implementado */}
 
-      {/* <div>Prensa</div>
-          <hr /> */}
+      {/* Sección "En la Prensa" no implementado */}
 
-      {/* <div>Prueba gratis</div>
-          <hr /> */}
+      {/* Sección "Prueba gratis" no implementado */}
 
-      {/* <div>Newsletter</div>
-          <hr /> */}
+      {/* Sección "Newsletter" no implementado */}
 
-      {/* <div>Footer</div>
-          <hr /> */}
+      {/* Sección "Footer" no implementado */}
     </>
   );
 };

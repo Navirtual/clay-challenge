@@ -56,4 +56,22 @@ app.get(`${BASE_PATH}/:lang/:component`, async (req, res) => {
   res.status(STATUS_CODE.OK).json(results);
 });
 
+app.put(`${BASE_PATH}/:lang/:component`, async (req, res) => {
+  const collection = await TextsCollection.findOne({
+    lang: req.params.lang,
+    component: req.params.component,
+  });
+
+  const body = req.body;
+  const newCollection = {
+    ...collection,
+    ...body,
+  };
+
+  await TextsCollection.update(collection._id, newCollection);
+  res
+    .status(STATUS_CODE.OK)
+    .json({ status: STATUS_CODE.OK, mensaje: "Registro actualizado." });
+});
+
 WebApp.connectHandlers.use(app);
