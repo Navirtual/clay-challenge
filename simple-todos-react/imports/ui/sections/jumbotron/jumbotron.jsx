@@ -21,12 +21,10 @@ export const Jumbotron = ({ lang }) => {
                 <h2 className="jumbotron-title mb-4">{texto.title}</h2>
                 <h2 className="jumbotron-text mb-4">{texto.text}</h2>
                 <div className="row pt-4">
-                  <div className="col-md-6">
+                  <div className="col">
                     <button className="btn btn-primary btn-start-now">
                       {texto.button.start}
                     </button>
-                  </div>
-                  <div className="col-md-6">
                     <button className="btn btn-primary btn-free-test">
                       {texto.button.test}
                     </button>

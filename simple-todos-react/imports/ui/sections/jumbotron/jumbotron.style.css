@@ -25,6 +25,7 @@
   font-weight: 700;
   font-size: 17px;
   border: 2px solid #0097a7;
+  margin-right: 20px;
 }
 
 .btn-start-now:hover,
@@ -38,6 +39,7 @@
 @media (max-width: 768px) {
   .btn-start-now {
     margin-bottom: 20px;
+    margin-right: auto;
   }
 }
 
