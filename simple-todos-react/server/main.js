@@ -11,8 +11,6 @@ import express from "express";
 
 const swaggerUI = require("swagger-ui-express");
 
-console.log(swaggerDocument);
-
 const app = express();
 
 app.use("/api-doc", swaggerUI.serve, swaggerUI.setup(swaggerDocument));

@@ -9,8 +9,6 @@ export const Jumbotron = ({ lang }) => {
     TextsCollection.findOne({ lang, component: COMPONENTE.JUMBOTRON })
   );
 
-  console.log(texto);
-
   /**
    * Se comenta implementación que utiliza el service.
    */
