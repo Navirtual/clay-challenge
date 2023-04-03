@@ -6,7 +6,7 @@
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
-    "deploy": "meteor deploy clay-tech-app --mongo --free -s Meteor.settings"
+    "deploy": "meteor --production deploy clay-tech-app --mongo --free -s Meteor.settings"
   },
   "dependencies": {
     "@babel/runtime": "^7.21.0",
